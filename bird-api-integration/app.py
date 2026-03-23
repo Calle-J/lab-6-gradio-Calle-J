@@ -217,7 +217,7 @@ def refresh_bird_choices():
     bird_nicknames = get_bird_choices()
     return gr.Dropdown(choices=bird_nicknames)
 
-with gr.Blocks() as assignment:
+with gr.Blocks() as app:
     with gr.Row():
         gr.Markdown("# 🦅 Birds Viewer")
         dark_theme = gr.Button("🌑 Dark", size="sm", scale=0)
@@ -450,4 +450,4 @@ with gr.Blocks() as assignment:
         outputs=sightings_table
     )
 
-assignment.launch(theme=gr.themes.Soft(primary_hue="blue"))
+app.launch(theme=gr.themes.Soft(primary_hue="blue"))
