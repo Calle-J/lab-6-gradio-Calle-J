@@ -21,13 +21,11 @@ def extract_image_details(image):
 
     width, height = img.size
     mode = img.mode
-    format_info = img.format if img.format else "Unknown"
 
     details = f"""
     - Width: {width}px
     - Height: {height}px
     - Mode: {mode}
-    - Format: {format_info}
     """
 
     return details, gr.Accordion(open=True)
